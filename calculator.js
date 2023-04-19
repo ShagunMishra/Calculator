@@ -5,6 +5,8 @@ const bodyParser = require("body-parser"); // importing bodyParser that will par
 const app = express();
 app.use(bodyParser.urlencoded({extended: true})) //establishing the bodyParser for usage
 
+app.use('/', express.static('/index.html'));
+
 //get request is used get information form the server
 
 app.get("/", function(req, res) {      // "/" is used for the home route
